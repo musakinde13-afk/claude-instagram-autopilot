@@ -22,6 +22,14 @@ An array of `slides`, each `{ "kind": "hook" | "tool" | "cta", ... }`:
 
 Claude (via [claude-content-skills](https://github.com/Ootto-AI/claude-content-skills)) writes this JSON; Remotion renders the video.
 
+## Animation (GSAP, frame-synced)
+Every scene builds a **paused** GSAP timeline and seeks it to `frame / fps` (`useGsap` in [`src/Reel.tsx`](src/Reel.tsx)), so renders come out the same every time, even with parallel render tabs. Never let GSAP play on its own clock inside Remotion.
+- Hook: per-character **split text** rise-in (React Bits *SplitText* idea, no plugin)
+- Tool cards / CTA: per-word **blur text** (React Bits *BlurText* idea), card + number pop
+- Each slide blurs out in its last 0.3s; the CTA's **Post** button pulses
+
+To add an effect: give the element a `className`, then add a `tl.from(".thatClass", {...}, atSeconds)` in the scene's `useGsap` callback.
+
 ## Re-theme
 All colors + fonts are the tokens at the top of [`src/Reel.tsx`](src/Reel.tsx) — change `CORAL` / `GOLD` / `INK` / `BG` to make it your brand.
 

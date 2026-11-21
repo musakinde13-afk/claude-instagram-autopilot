@@ -1,10 +1,9 @@
 import { registerRoot, Composition } from "remotion";
 import React from "react";
-import { Reel } from "./Reel";
+import { Reel, SLIDE_SECS } from "./Reel";
 import sample from "../sample-carousel.json";
 
 const FPS = 30;
-const SECS_PER_SLIDE = 3.4;
 
 const Root: React.FC = () => (
   <Composition
@@ -15,7 +14,7 @@ const Root: React.FC = () => (
     height={1920}
     defaultProps={sample as any}
     calculateMetadata={({ props }: any) => ({
-      durationInFrames: Math.max(1, Math.round((props.slides?.length || 8) * SECS_PER_SLIDE * FPS)),
+      durationInFrames: Math.max(1, Math.round((props.slides?.length || 8) * SLIDE_SECS * FPS)),
     })}
   />
 );
