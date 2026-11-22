@@ -4,3 +4,5 @@ shots/
 .taste-skill/layout/
 .taste-skill/gate/
 .taste-skill/gate.json
+.taste-skill/build.done.json
+.taste-skill/build.json
