@@ -130,6 +130,66 @@
     </div></div>
   </section>
 
+  <section class="section" id="callback" aria-labelledby="callback-h">
+    <div class="wrap grid grid--top">
+      <div class="span-6">
+        <div class="section-head">
+          <h2 id="callback-h">Request a callback</h2>
+          <p>Your name, number, postcode and the problem. We call you back with a price and a time.</p>
+        </div>
+        <form class="form" name="callback" action="/" method="post" data-netlify="true" netlify-honeypot="bot-field" data-endpoint="/" data-sent="Your callback request is in. We ring you back the same day." data-failed="Not sent. Your details are still here: try again, or call 07961 863549." novalidate>
+          <p hidden><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+          <div class="field"><label for="f-name">Name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="f-name-err">
+            <p class="field__error" id="f-name-err" hidden>Write the name we should ask for.</p></div>
+          <div class="field"><label for="f-phone">Phone number</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" required aria-describedby="f-phone-err">
+            <p class="field__error" id="f-phone-err" hidden>Write the number we should ring back.</p></div>
+          <div class="field"><label for="f-postcode">Postcode</label>
+            <input id="f-postcode" name="postcode" type="text" autocomplete="postal-code" required aria-describedby="f-postcode-err">
+            <p class="field__error" id="f-postcode-err" hidden>Write your postcode, like LS11.</p></div>
+          <div class="field"><label for="f-issue">The problem</label>
+            <input id="f-issue" name="issue" type="text" autocomplete="off" required aria-describedby="f-issue-err">
+            <p class="field__error" id="f-issue-err" hidden>Write what has gone wrong, in a few words.</p></div>
+          <div class="btn-row"><button class="btn btn--primary" type="submit">Request a callback</button></div>
+          <p class="form__status" role="status" data-form-status></p>
+          <p class="t-small">We only use your details to price this job. Urgent? Call first.</p>
+        </form>
+      </div>
+      <figure class="side-photo span-6 start-7">
+        <img src="img/engineer.jpg" srcset="img/engineer-800.jpg 648w, img/engineer.jpg 1134w" sizes="(max-width: 1023px) 100vw, 50vw" width="1134" height="1400" alt="A Blaymires engineer beside Ideal's Vogue Max and Logic Max boilers" style="object-position: 40% 50%" loading="lazy" data-source="client" data-subject="the engineer">
+      </figure>
+    </div>
+  </section>
+
+<footer class="footer closing footer--visit" id="contact" aria-labelledby="close-h">
+  <div class="wrap">
+    <div class="closing__cta close--type">
+      <div class="section-head">
+        <h2 id="close-h">Call 07961 863549</h2>
+        <p>Answered day and night by a Gas Safe registered engineer, every day of the year.</p>
+      </div>
+      <a class="btn btn--primary btn--xl btn--wide" href="tel:+447961863549">Call 07961 863549<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+    </div>
+    <div class="closing__links">
+      <div class="grid">
+        <div class="span-6 stack-4">
+          <address class="footer__address">Crow Nest Drive, Beeston, Leeds</address>
+          <p><a class="link" href="https://www.openstreetmap.org/search?query=Crow%20Nest%20Drive%20Beeston%20Leeds">Get directions</a></p>
+          <p class="footer__lede">Gas Safe registered, Checkatrade approved and a Which? Trusted Trader.</p>
+        </div>
+        <div class="span-6 start-7 stack-4">
+          <h3>Opening hours</h3>
+          <dl class="hours" data-tz="Europe/London"><dt data-days="mon-sun">Every day</dt><dd>Open 24 hours</dd></dl>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <span>&copy; 2026 Blaymires Plumbing &amp; Heating &nbsp; <a href="privacy.html">Privacy</a> &nbsp; <a href="terms.html">Terms</a></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
   <section class="section" id="services" aria-labelledby="services-h">
     <div class="wrap grid grid--middle">
       <div class="span-6">
@@ -203,66 +263,10 @@
     </div>
   </section>
 
-  <section class="section" id="callback" aria-labelledby="callback-h">
-    <div class="wrap grid grid--top">
-      <div class="span-6">
-        <div class="section-head">
-          <h2 id="callback-h">Request a callback</h2>
-          <p>Your name, number, postcode and the problem. We call you back with a price and a time.</p>
-        </div>
-        <form class="form" name="callback" action="/" method="post" data-netlify="true" netlify-honeypot="bot-field" data-endpoint="/" data-sent="Your callback request is in. We ring you back the same day." data-failed="Not sent. Your details are still here: try again, or call 07961 863549." novalidate>
-          <p hidden><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-          <div class="field"><label for="f-name">Name</label>
-            <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="f-name-err">
-            <p class="field__error" id="f-name-err" hidden>Write the name we should ask for.</p></div>
-          <div class="field"><label for="f-phone">Phone number</label>
-            <input id="f-phone" name="phone" type="tel" autocomplete="tel" required aria-describedby="f-phone-err">
-            <p class="field__error" id="f-phone-err" hidden>Write the number we should ring back.</p></div>
-          <div class="field"><label for="f-postcode">Postcode</label>
-            <input id="f-postcode" name="postcode" type="text" autocomplete="postal-code" required aria-describedby="f-postcode-err">
-            <p class="field__error" id="f-postcode-err" hidden>Write your postcode, like LS11.</p></div>
-          <div class="field"><label for="f-issue">The problem</label>
-            <input id="f-issue" name="issue" type="text" autocomplete="off" required aria-describedby="f-issue-err">
-            <p class="field__error" id="f-issue-err" hidden>Write what has gone wrong, in a few words.</p></div>
-          <div class="btn-row"><button class="btn btn--primary" type="submit">Request a callback</button></div>
-          <p class="form__status" role="status" data-form-status></p>
-          <p class="t-small">We only use your details to price this job. Urgent? Call first.</p>
-        </form>
-      </div>
-      <figure class="side-photo span-6 start-7">
-        <img src="img/engineer.jpg" srcset="img/engineer-800.jpg 648w, img/engineer.jpg 1134w" sizes="(max-width: 1023px) 100vw, 50vw" width="1134" height="1400" alt="A Blaymires engineer beside Ideal's Vogue Max and Logic Max boilers" style="object-position: 40% 50%" loading="lazy" data-source="client" data-subject="the engineer">
-      </figure>
-    </div>
-  </section>
+  
 </main>
 
-<footer class="footer closing footer--visit" id="contact" aria-labelledby="close-h">
-  <div class="wrap">
-    <div class="closing__cta close--type">
-      <div class="section-head">
-        <h2 id="close-h">Call 07961 863549</h2>
-        <p>Answered day and night by a Gas Safe registered engineer, every day of the year.</p>
-      </div>
-      <a class="btn btn--primary btn--xl btn--wide" href="tel:+447961863549">Call 07961 863549<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
-    </div>
-    <div class="closing__links">
-      <div class="grid">
-        <div class="span-6 stack-4">
-          <address class="footer__address">Crow Nest Drive, Beeston, Leeds</address>
-          <p><a class="link" href="https://www.openstreetmap.org/search?query=Crow%20Nest%20Drive%20Beeston%20Leeds">Get directions</a></p>
-          <p class="footer__lede">Gas Safe registered, Checkatrade approved and a Which? Trusted Trader.</p>
-        </div>
-        <div class="span-6 start-7 stack-4">
-          <h3>Opening hours</h3>
-          <dl class="hours" data-tz="Europe/London"><dt data-days="mon-sun">Every day</dt><dd>Open 24 hours</dd></dl>
-        </div>
-      </div>
-      <div class="footer__legal">
-        <span>&copy; 2026 Blaymires Plumbing &amp; Heating &nbsp; <a href="privacy.html">Privacy</a> &nbsp; <a href="terms.html">Terms</a></span>
-      </div>
-    </div>
-  </div>
-</footer>
+
 
 <nav class="actionbar" aria-label="Quick actions">
   <a class="btn btn--primary" href="tel:+447961863549">Call 07961 863549</a>
