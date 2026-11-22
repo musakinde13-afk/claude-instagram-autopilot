@@ -1,16 +1,25 @@
 {
- "start": "2026-11-22T00:38:39.804Z",
- "round": 0,
+ "start": "2026-11-22T00:42:41.446Z",
+ "round": 1,
  "idle": 0,
  "errors": 0,
  "status": "pass",
  "history": [
   {
-   "at": "2026-11-22T00:40:27.443Z",
+   "at": "2026-11-22T00:44:28.689Z",
+   "mode": "manual",
+   "status": "fail",
+   "fails": 1,
+   "round": 1,
+   "reused": false,
+   "stopHookActive": false
+  },
+  {
+   "at": "2026-11-22T00:46:22.579Z",
    "mode": "manual",
    "status": "pass",
    "fails": 0,
-   "round": 0,
+   "round": 1,
    "reused": false,
    "stopHookActive": false
   }
@@ -24,11 +33,15 @@
   "category": "plumbing and heating repairs in Leeds",
   "primary": "Call 07961 863549",
   "rounds": 3,
-  "start": "2026-11-22T00:38:39.804Z",
+  "start": "2026-11-22T00:42:41.446Z",
   "by": "gate.mjs --start"
  },
  "manual": true,
- "fp": "a019a5fc2c24a1f2",
+ "roundKey": "a2b89a8508a748bf:79908ca3",
+ "roundFree": false,
+ "idleFree": false,
+ "blockKey": null,
+ "fp": "1b7e4dbafe0cdaca",
  "page": "index.html",
  "found": {
   "fails": [
@@ -100,16 +113,6 @@
     "from": "consistency"
    },
    {
-    "check": "copy-headings",
-    "where": "h2#work-h \"The standard we work to. Tested, cleaned\"",
-    "msg": "\"The standard we work to. Tested, cleaned and tidied before w\" names no product, part, place or section (the one brand line a page may have)",
-    "fix": "name the thing in every heading: the product, a part, the place or a section noun",
-    "widths": [
-     1440
-    ],
-    "from": "consistency"
-   },
-   {
     "check": "section-gaps",
     "where": "main#top > section.hero.hero--split / section#services",
     "msg": "178px between these sections, -30% against the median 254px",
@@ -127,17 +130,6 @@
     "fix": "close the empty space: move the content together, or give the space the visual it lacks",
     "widths": [
      1440
-    ],
-    "from": "consistency"
-   },
-   {
-    "check": "photo-set",
-    "where": "div.wrap > div.grid.wall > div.frame.frame--photo:nth-of-type(3) > img.frame__img \"leak-800.jpg\"",
-    "msg": "6 photographs in more than one look: saturation from 0.16 to 0.65; the odd one out is leak-800.jpg",
-    "fix": "grade the photographs to one look (light, colour, warmth), or replace the odd one out",
-    "widths": [
-     1440,
-     390
     ],
     "from": "consistency"
    },
@@ -304,8 +296,8 @@
   ],
   "crashed": [],
   "seconds": {
-   "consistency": 104,
-   "layout": 4
+   "consistency": 103,
+   "layout": 3
   }
  },
  "open": [],
@@ -345,6 +337,6 @@
    "reason": "the client's own business number as a tap-to-call link; the main action of a 24-hour emergency plumber"
   }
  ],
- "warnCount": 23,
- "at": "2026-11-22T00:40:27.444Z"
+ "warnCount": 21,
+ "at": "2026-11-22T00:46:22.580Z"
 }
