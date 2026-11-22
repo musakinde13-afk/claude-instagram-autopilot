@@ -1,0 +1,6 @@
+# Netlify serves the Blaymires site from blaymires-site/ (no build step).
+# The command only drops design-kit folders the page never loads, to keep the upload small.
+[build]
+  base = "blaymires-site"
+  publish = "."
+  command = "rm -rf assets/photos assets/objects assets/scenes assets/layout/img shots .taste-skill"
