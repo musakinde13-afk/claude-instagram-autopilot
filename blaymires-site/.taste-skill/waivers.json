@@ -1,0 +1,4 @@
+[
+ { "check": "phone-number", "target": "div.nav__actions \"07961", "reason": "the client's own business number, given on their current site and painted on their vans; a plumber's page must show it" },
+ { "check": "phone-number", "target": "tel:+447961863549", "reason": "the client's own business number as a tap-to-call link; the main action of a 24-hour emergency plumber" }
+]
