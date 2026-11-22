@@ -210,7 +210,8 @@
           <h2 id="callback-h">Request a callback</h2>
           <p>Your name, number, postcode and the problem. We call you back with a price and a time.</p>
         </div>
-        <form class="form" action="mailto:hello@blaymiresheating.co.uk" method="post" enctype="text/plain" data-endpoint="" data-sent="Your callback request is in. We ring you back the same day." novalidate>
+        <form class="form" name="callback" action="/" method="post" data-netlify="true" netlify-honeypot="bot-field" data-endpoint="/" data-sent="Your callback request is in. We ring you back the same day." data-failed="Not sent. Your details are still here: try again, or call 07961 863549." novalidate>
+          <p hidden><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
           <div class="field"><label for="f-name">Name</label>
             <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="f-name-err">
             <p class="field__error" id="f-name-err" hidden>Write the name we should ask for.</p></div>
