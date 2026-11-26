@@ -9,8 +9,9 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Modern Barbers | Thornton's Arcade, Leeds">
   <meta property="og:description" content="Barbering in Leeds city centre. Rated 4.9 from over 1,000 Google reviews.">
-  <!-- og:image must be an absolute URL once the domain is known -->
-  <meta property="og:image" content="/og-image.png">
+  <!-- Mock-up URL: change both to the real domain at launch -->
+  <meta property="og:url" content="https://modern-barbers-mockup.netlify.app/">
+  <meta property="og:image" content="https://modern-barbers-mockup.netlify.app/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
@@ -39,11 +40,16 @@
       <div class="wrap">
         <h2>Services and prices</h2>
         <ul class="price-list">
-          <li><span>[ADD SERVICE, e.g. Haircut]</span><span class="price">[ADD PRICE]</span></li>
-          <li><span>[ADD SERVICE, e.g. Skin fade]</span><span class="price">[ADD PRICE]</span></li>
-          <li><span>[ADD SERVICE, e.g. Beard trim]</span><span class="price">[ADD PRICE]</span></li>
-          <li><span>[ADD SERVICE, e.g. Cut and beard]</span><span class="price">[ADD PRICE]</span></li>
-          <li><span>[ADD SERVICE, e.g. Kids cut]</span><span class="price">[ADD PRICE]</span></li>
+          <li><span>Haircut and finish <small>30 min</small></span><span class="price">£25</span></li>
+          <li><span>Haircut &amp; wash <small>40 min</small></span><span class="price">£30</span></li>
+          <li><span>Back and sides <small>30 min</small></span><span class="price">£20</span></li>
+          <li><span>Haircut &amp; beard trim <small>50 min</small></span><span class="price">£35</span></li>
+          <li><span>Hot towel shave <small>40 min</small></span><span class="price">£25</span></li>
+          <li><span>Beard shape up <small>25 min</small></span><span class="price">£15</span></li>
+          <li><span>Boys <small>25 min</small></span><span class="price">£15</span></li>
+          <li><span>Dad &amp; Lad <small>1 hr</small></span><span class="price">£35</span></li>
+          <li><span>Student haircut (Mon–Fri) <small>25 min</small></span><span class="price">£20</span></li>
+          <li><span>Student haircut &amp; beard trim (Mon–Fri) <small>45 min</small></span><span class="price">£30</span></li>
         </ul>
       </div>
     </section>
@@ -72,9 +78,16 @@
             <label for="service">Preferred service</label>
             <select id="service" name="service" required>
               <option value="">Choose a service</option>
-              <option>[ADD SERVICE 1]</option>
-              <option>[ADD SERVICE 2]</option>
-              <option>[ADD SERVICE 3]</option>
+              <option>Haircut and finish</option>
+              <option>Haircut &amp; wash</option>
+              <option>Back and sides</option>
+              <option>Haircut &amp; beard trim</option>
+              <option>Hot towel shave</option>
+              <option>Beard shape up</option>
+              <option>Boys</option>
+              <option>Dad &amp; Lad</option>
+              <option>Student haircut (Mon–Fri)</option>
+              <option>Student haircut &amp; beard trim (Mon–Fri)</option>
             </select>
             <p class="error" id="service-error"></p>
           </div>
@@ -86,12 +99,11 @@
             </div>
             <div class="field">
               <label for="slot">Time slot</label>
-              <!-- [CONFIRM TIME SLOTS against real opening hours] -->
               <select id="slot" name="slot" required>
                 <option value="">Choose a time</option>
-                <option>Morning</option>
-                <option>Midday</option>
-                <option>Afternoon</option>
+                <option>Morning (opening to 12pm)</option>
+                <option>Midday (12pm to 2pm)</option>
+                <option>Afternoon (2pm to close)</option>
               </select>
               <p class="error" id="slot-error"></p>
             </div>
@@ -119,13 +131,13 @@
       <div class="wrap find">
         <div>
           <h2>Find us</h2>
-          <address>Modern Barbers<br>[ADD UNIT NUMBER]<br>Thornton's Arcade<br>Leeds LS1 [ADD FULL POSTCODE]</address>
+          <address>Modern Barbers<br>23 Thornton's Arcade<br>Leeds LS1 6LQ</address>
           <p><a class="btn btn-ghost" href="tel:+441132454689">Call 0113 245 4689</a></p>
           <h3>Opening hours</h3>
-          <p>[ADD OPENING HOURS]</p>
+          <p>Monday to Saturday: 9am to 6pm<br>Sunday: 10am to 4:30pm</p>
         </div>
         <div class="ph ph-map" id="map" role="img" aria-label="Map of Thornton's Arcade, Leeds">
-          <p>[PLACEHOLDER MAP]<br>The map loads after you accept cookies.<br><a href="https://www.google.com/maps/search/?api=1&amp;query=Thornton%27s+Arcade+Leeds" rel="noopener" target="_blank">Open in Google Maps</a></p>
+          <p>[PLACEHOLDER MAP]<br>The map loads after you accept cookies.<br><a href="https://www.google.com/maps/search/?api=1&amp;query=23+Thornton%27s+Arcade+Leeds+LS1+6LQ" rel="noopener" target="_blank">Open in Google Maps</a></p>
         </div>
       </div>
     </section>

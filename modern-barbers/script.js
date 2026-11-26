@@ -64,7 +64,7 @@ function loadConsented() {
   // const s = document.createElement('script'); s.src = 'https://...'; s.async = true; document.head.append(s);
   const map = document.getElementById('map');
   if (map && !map.querySelector('iframe')) {
-    map.innerHTML = '<iframe title="Map of Thornton\'s Arcade, Leeds" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Thornton%27s+Arcade+Leeds&output=embed"></iframe>';
+    map.innerHTML = '<iframe title="Map of Thornton\'s Arcade, Leeds" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=23+Thornton%27s+Arcade+Leeds+LS1+6LQ&output=embed"></iframe>';
   }
 }
 
