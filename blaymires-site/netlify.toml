@@ -1,5 +1,13 @@
 [build]
   publish = "public"
+  command = "sh build.sh"
+
+# The one place for the site address and business details. build.sh writes
+# them into every page, the sitemap and robots.txt on each deploy.
+[build.environment]
+  SITE_URL = "https://blaymires-callout.netlify.app"
+  GAS_SAFE_NO = "[add before launch]"
+  BUSINESS_EMAIL = "[add before launch]"
 
 # Netlify serves HTTPS and redirects http automatically; HSTS keeps browsers on it.
 [[headers]]
@@ -19,8 +27,3 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-[[redirects]]
-  from = "https://blaymires.co.uk/*"
-  to = "https://www.blaymires.co.uk/:splat"
-  status = 301
-  force = true

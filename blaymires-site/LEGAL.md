@@ -2,9 +2,9 @@
 
 ## Must be done before launch (site is non-compliant until then)
 1. Written OK from Paul (director, Blaymires Plumbing & Heating Limited) to publish a site in the company's name, with its photos and reviews.
-2. Gas Safe Register number in the footer (E-Commerce Regulations 2002 reg 6). Verify it at gassaferegister.co.uk.
-3. Business email address in the footer and policies (same regulation).
-4. VAT number in the footer if the company is VAT registered.
+2. Gas Safe Register number: set `GAS_SAFE_NO` in netlify.toml (E-Commerce Regulations 2002 reg 6). Verify it at gassaferegister.co.uk.
+3. Business email address: set `BUSINESS_EMAIL` in netlify.toml (same regulation).
+4. VAT number in the footer if the company is VAT registered (not yet a placeholder; add it the same way if needed).
 5. Paul confirms the retention periods in the privacy policy (12 months / 6 years) and that the company pays the ICO data protection fee (ico.org.uk/fee).
 6. Netlify Forms email notification switched on, so requests reach Paul.
 7. Remove `X-Robots-Tag = "noindex"` from netlify.toml once approved.
