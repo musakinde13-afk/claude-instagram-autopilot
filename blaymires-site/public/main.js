@@ -10,7 +10,7 @@ function analytics() {
   window.dataLayer = window.dataLayer || [];
   window.gtag = function () { dataLayer.push(arguments); };
   gtag('js', new Date());
-  gtag('config', GA, { anonymize_ip: true });
+  gtag('config', GA);
 }
 let consent = null;
 try { consent = localStorage.getItem('consent'); } catch (e) {}
@@ -21,11 +21,24 @@ bar.addEventListener('click', e => {
   try { localStorage.setItem('consent', v); } catch (e) {}
   bar.hidden = true;
   if (v === 'yes') analytics();
+  // Withdrawing consent removes any Google Analytics cookies already set.
+  else document.cookie.split('; ').filter(c => c.startsWith('_ga')).forEach(c => {
+    const n = c.split('=')[0];
+    document.cookie = n + '=; Max-Age=0; path=/';
+    document.cookie = n + '=; Max-Age=0; path=/; domain=.' + location.hostname.replace(/^www\./, '');
+  });
 });
-document.getElementById('cookie-settings')?.addEventListener('click', e => { e.preventDefault(); bar.hidden = false; });
+document.querySelectorAll('#cookie-settings,#cookie-settings-inline').forEach(a => a.addEventListener('click', e => { e.preventDefault(); bar.hidden = false; }));
 
 // Seamless review loop: duplicate the cards once, the CSS slides the track by half its width.
 const track = document.querySelector('.track');
+const pause = document.querySelector('.pause');
+pause?.addEventListener('click', () => {
+  const on = pause.getAttribute('aria-pressed') !== 'true';
+  pause.setAttribute('aria-pressed', on);
+  pause.textContent = on ? 'Play reviews' : 'Pause reviews';
+  pause.closest('.reviews').classList.toggle('paused', on);
+});
 if (track) track.append(...[...track.children].map(n => { const c = n.cloneNode(true); c.setAttribute('aria-hidden', 'true'); return c; }));
 
 const f = document.getElementById('callout');
