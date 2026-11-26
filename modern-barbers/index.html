@@ -51,11 +51,12 @@
     <section id="book" class="section alt">
       <div class="wrap">
         <h2>Book a cut</h2>
-        <!-- [ADD FORM ENDPOINT]: set action to the real handler (e.g. Netlify Forms or the shop's booking system) -->
-        <form id="booking" action="#" method="post" novalidate>
+        <p class="notice" id="not-connected" role="note">This booking form is not connected yet, so requests cannot be sent. Please call <a href="tel:+441132454689">0113 245 4689</a> to book.</p>
+        <!-- The ONLY place the endpoint is set. Replace the action value below with the real URL (e.g. a Formspree or booking-system URL). -->
+        <form id="booking" action="[ADD FORM ENDPOINT]" method="post" novalidate>
           <div class="hp" aria-hidden="true">
-            <label for="company">Leave this empty</label>
-            <input id="company" name="company" type="text" tabindex="-1" autocomplete="off">
+            <label for="mb_hp">Leave this field empty</label>
+            <input id="mb_hp" name="mb_hp" type="text" tabindex="-1" autocomplete="off">
           </div>
           <div class="field">
             <label for="name">Name</label>
@@ -96,7 +97,8 @@
             </div>
           </div>
           <button class="btn" type="submit">Request booking</button>
-          <p class="success" id="success" role="status" hidden>Thanks, your request has been sent. We will call you to confirm. (Mock-up: nothing was actually sent.)</p>
+          <p class="success" id="success" role="status" hidden>Thanks, your request has been sent. We will call you to confirm.</p>
+          <p class="notice" id="form-error" role="alert" hidden></p>
         </form>
       </div>
     </section>
@@ -122,7 +124,9 @@
           <h3>Opening hours</h3>
           <p>[ADD OPENING HOURS]</p>
         </div>
-        <div class="ph ph-map" role="img" aria-label="Placeholder for a map of Thornton's Arcade, Leeds">[PLACEHOLDER MAP: embed added after cookie consent]</div>
+        <div class="ph ph-map" id="map" role="img" aria-label="Map of Thornton's Arcade, Leeds">
+          <p>[PLACEHOLDER MAP]<br>The map loads after you accept cookies.<br><a href="https://www.google.com/maps/search/?api=1&amp;query=Thornton%27s+Arcade+Leeds" rel="noopener" target="_blank">Open in Google Maps</a></p>
+        </div>
       </div>
     </section>
   </main>
@@ -135,7 +139,7 @@
   </footer>
 
   <div class="cookie" id="cookie" hidden>
-    <p>We would like to use analytics cookies to see how the site is used. See our <a href="/cookies.html">cookie policy</a>.</p>
+    <p>We would like to use analytics cookies, and show a Google map that sets its own cookies. See our <a href="/cookies.html">cookie policy</a>.</p>
     <div><button class="btn" data-consent="yes">Accept</button> <button class="btn btn-ghost" data-consent="no">Reject</button></div>
   </div>
 

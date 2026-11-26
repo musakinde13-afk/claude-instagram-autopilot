@@ -81,3 +81,7 @@ address { font-style: normal; margin-bottom: 16px; }
   .find { grid-template-columns: 1fr 1fr; align-items: start; }
   .cookie { left: auto; max-width: 420px; }
 }
+.notice { padding: 14px; border-left: 4px solid var(--error); background: var(--bg); margin: 0 0 20px; max-width: 560px; }
+#form-error { margin-top: 16px; }
+.ph-map iframe { width: 100%; height: 100%; min-height: 280px; border: 0; }
+.ph-map:has(iframe) { padding: 0; border-style: solid; }
