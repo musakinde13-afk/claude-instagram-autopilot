@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Modern Barbers | Barber in Thornton's Arcade, Leeds</title>
+  <meta name="description" content="Modern Barbers in Thornton's Arcade, Leeds city centre. Rated 4.9 from over 1,000 Google reviews. Book a cut or call 0113 245 4689.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Modern Barbers | Thornton's Arcade, Leeds">
+  <meta property="og:description" content="Barbering in Leeds city centre. Rated 4.9 from over 1,000 Google reviews.">
+  <!-- og:image must be an absolute URL once the domain is known -->
+  <meta property="og:image" content="/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="mockup-banner">Design mock-up by Seed Agency. Not the official Modern Barbers website.</div>
+
+  <header class="site-header">
+    <a class="logo" href="#top">Modern Barbers</a>
+    <a class="header-call" href="tel:+441132454689">0113 245 4689</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Thornton's Arcade, Leeds LS1</p>
+        <h1>Modern Barbers</h1>
+        <p class="lead">Classic barbering in the heart of Leeds city centre.</p>
+        <p class="rating"><span class="stars" aria-hidden="true">★★★★★</span> <strong>4.9</strong> from over 1,000 Google reviews</p>
+        <a class="btn" href="#book">Book a cut</a>
+      </div>
+      <div class="ph ph-hero" role="img" aria-label="Placeholder for a photo of the shop interior">[PLACEHOLDER PHOTO: shop interior, owner to supply]</div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="wrap">
+        <h2>Services and prices</h2>
+        <ul class="price-list">
+          <li><span>[ADD SERVICE, e.g. Haircut]</span><span class="price">[ADD PRICE]</span></li>
+          <li><span>[ADD SERVICE, e.g. Skin fade]</span><span class="price">[ADD PRICE]</span></li>
+          <li><span>[ADD SERVICE, e.g. Beard trim]</span><span class="price">[ADD PRICE]</span></li>
+          <li><span>[ADD SERVICE, e.g. Cut and beard]</span><span class="price">[ADD PRICE]</span></li>
+          <li><span>[ADD SERVICE, e.g. Kids cut]</span><span class="price">[ADD PRICE]</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="book" class="section alt">
+      <div class="wrap">
+        <h2>Book a cut</h2>
+        <!-- [ADD FORM ENDPOINT]: set action to the real handler (e.g. Netlify Forms or the shop's booking system) -->
+        <form id="booking" action="#" method="post" novalidate>
+          <div class="hp" aria-hidden="true">
+            <label for="company">Leave this empty</label>
+            <input id="company" name="company" type="text" tabindex="-1" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required minlength="2">
+            <p class="error" id="name-error"></p>
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" required pattern="[0-9 +()\-]{10,}">
+            <p class="error" id="phone-error"></p>
+          </div>
+          <div class="field">
+            <label for="service">Preferred service</label>
+            <select id="service" name="service" required>
+              <option value="">Choose a service</option>
+              <option>[ADD SERVICE 1]</option>
+              <option>[ADD SERVICE 2]</option>
+              <option>[ADD SERVICE 3]</option>
+            </select>
+            <p class="error" id="service-error"></p>
+          </div>
+          <div class="row">
+            <div class="field">
+              <label for="date">Preferred date</label>
+              <input id="date" name="date" type="date" required>
+              <p class="error" id="date-error"></p>
+            </div>
+            <div class="field">
+              <label for="slot">Time slot</label>
+              <!-- [CONFIRM TIME SLOTS against real opening hours] -->
+              <select id="slot" name="slot" required>
+                <option value="">Choose a time</option>
+                <option>Morning</option>
+                <option>Midday</option>
+                <option>Afternoon</option>
+              </select>
+              <p class="error" id="slot-error"></p>
+            </div>
+          </div>
+          <button class="btn" type="submit">Request booking</button>
+          <p class="success" id="success" role="status" hidden>Thanks, your request has been sent. We will call you to confirm. (Mock-up: nothing was actually sent.)</p>
+        </form>
+      </div>
+    </section>
+
+    <section id="reviews" class="section">
+      <div class="wrap">
+        <h2>What customers say</h2>
+        <p class="note">[ADD REAL REVIEWS WITH PERMISSION]</p>
+        <div class="cards">
+          <blockquote class="card"><p>[ADD REAL REVIEW WITH PERMISSION]</p><footer>[REVIEWER NAME]</footer></blockquote>
+          <blockquote class="card"><p>[ADD REAL REVIEW WITH PERMISSION]</p><footer>[REVIEWER NAME]</footer></blockquote>
+          <blockquote class="card"><p>[ADD REAL REVIEW WITH PERMISSION]</p><footer>[REVIEWER NAME]</footer></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="find-us" class="section alt">
+      <div class="wrap find">
+        <div>
+          <h2>Find us</h2>
+          <address>Modern Barbers<br>[ADD UNIT NUMBER]<br>Thornton's Arcade<br>Leeds LS1 [ADD FULL POSTCODE]</address>
+          <p><a class="btn btn-ghost" href="tel:+441132454689">Call 0113 245 4689</a></p>
+          <h3>Opening hours</h3>
+          <p>[ADD OPENING HOURS]</p>
+        </div>
+        <div class="ph ph-map" role="img" aria-label="Placeholder for a map of Thornton's Arcade, Leeds">[PLACEHOLDER MAP: embed added after cookie consent]</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><strong>Modern Barbers</strong> · Thornton's Arcade, Leeds · <a href="tel:+441132454689">0113 245 4689</a></p>
+      <p><a href="/privacy.html">Privacy policy</a> · <a href="/cookies.html">Cookie policy</a> · <a href="/terms.html">Terms and conditions</a></p>
+    </div>
+  </footer>
+
+  <div class="cookie" id="cookie" hidden>
+    <p>We would like to use analytics cookies to see how the site is used. See our <a href="/cookies.html">cookie policy</a>.</p>
+    <div><button class="btn" data-consent="yes">Accept</button> <button class="btn btn-ghost" data-consent="no">Reject</button></div>
+  </div>
+
+  <script src="/script.js" defer></script>
+</body>
+</html>
