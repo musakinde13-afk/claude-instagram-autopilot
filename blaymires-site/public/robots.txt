@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /thanks.html
+Sitemap: https://www.blaymires.co.uk/sitemap.xml
